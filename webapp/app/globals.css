@@ -1,0 +1,61 @@
+:root {
+  color-scheme: dark;
+  --bg: radial-gradient(circle at top, #1a2440 0%, #05060a 60%, #000000 100%);
+  --accent: #79a6ff;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+body {
+  min-height: 100vh;
+  color: #e0e7ff;
+}
+
+canvas {
+  display: block;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  pointer-events: none;
+  padding: 40px;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
+}
+
+.overlay h1 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+  color: rgba(241, 245, 255, 0.85);
+  text-shadow: 0 0 30px rgba(99, 148, 255, 0.4);
+}
+
+.hint {
+  position: fixed;
+  inset: auto 0 24px;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  color: rgba(199, 210, 254, 0.6);
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+}
